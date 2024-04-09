@@ -29,11 +29,11 @@ const ModuleBox = ({ onClose, EventName, Description, Image, Link }) => {
           <FaTimes />
         </button>
         <div className="flex flex-col w-full lg:w-1/2 pt-4">
-          <h1 className='text-white text-3xl lg:text-6xl font-bold font-oswald mb-2 lg:mb-4'>{EventName}</h1>
-          <p className="text-sm mt-2 lg:mt-0 lg:text-xl lg:py-8 text-justify w-full leading-6 lg:leading-8 font-maven text-white">
+          <h1 className='text-white text-3xl lg:text-5xl font-bold font-oswald'>{EventName}</h1>
+          <p className="text-sm mt-2 lg:mt-0 lg:text-lg lg:py-6 text-justify w-full leading-6 lg:leading-8 font-maven text-white">
             {Description}
           </p>
-          <button onClick={redirectToEvent} className="bg-[#E2012D] text-white py-2 lg:py-3 w-[65%] lg:w-[45%] mt-7 flex justify-evenly items-center rounded-tr-full hover:bg-white hover:text-[#E2012D] transition-all duration-300 ease-in-out cursor-pointer font-oswald text-xl uppercase tracking-widest"> Register&nbsp; &nbsp; <FaLongArrowAltRight /> </button>
+          <button onClick={redirectToEvent} className="bg-[#E2012D] text-white py-2 w-[65%] lg:w-[45%] flex justify-evenly items-center rounded-tr-full hover:bg-white hover:text-[#E2012D] transition-all duration-300 ease-in-out cursor-pointer font-oswald text-xl uppercase tracking-widest"> Register&nbsp; &nbsp; <FaLongArrowAltRight /> </button>
         </div>
         <div className="w-full h-[180px] mb-2 lg:mb-0 lg:w-[470px] lg:h-[380px] rounded-tl-[80px] overflow-hidden">
           <img src={Image} className="w-full h-full" alt="" />
