@@ -15,6 +15,15 @@ const ModuleBox = ({ onClose, Name, Description, Image, Link }) => {
     window.location.href = Link;
   };
 
+  const limitDescription = (description, limit) => {
+    const words = description.split(' ');
+    if (words.length > limit) {
+      return words.slice(0, limit).join(' ') + '...';
+    } else {
+      return description;
+    }
+  };
+
   return (
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#060414de] shadow-lg shadow-[#ffffff17] z-20 grid place-items-center w-[90%] h-[95%] lg:h-[90%]">
       <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between px-7 py-7 lg:px-28">
@@ -27,7 +36,7 @@ const ModuleBox = ({ onClose, Name, Description, Image, Link }) => {
         <div className="flex flex-col w-full lg:w-1/2 pt-4">
           <h1 className='text-white text-3xl lg:text-6xl font-bold font-oswald mb-2 lg:mb-4'>{Name}</h1>
           <p className="text-sm mt-2 lg:mt-0 lg:text-xl lg:py-8 text-justify w-full leading-6 lg:leading-8 font-maven text-white">
-            {Description}
+          {limitDescription}
           </p>
           <button onClick={redirectToEvent} className="bg-[#E2012D] text-white py-2 lg:py-3 w-[65%] lg:w-[45%] mt-7 flex justify-evenly items-center rounded-tr-full hover:bg-white hover:text-[#E2012D] transition-all duration-300 ease-in-out cursor-pointer font-oswald text-xl uppercase tracking-widest"> View&nbsp; &nbsp; <FaLongArrowAltRight /> </button>
         </div>

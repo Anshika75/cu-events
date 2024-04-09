@@ -72,7 +72,7 @@ const StaticEvents = () => {
   };
 
   return (
-    <div id={"sevents"} className="h-full w-full bg-[#dddddd] py-10 relative">
+    <div id={"sevents"} className="h-full w-full bg-[#dddddd] py-10 px-4 lg:px-0 relative">
       <img src={tri} alt="" className='absolute top-0 left-[50%] -translate-x-1/2' />
       <h1 className='text-[#091022] text-6xl font-bold font-oswald text-center mb-4'>ONGOING <span className='text-[#E2012D]'>EVENTS</span></h1>
       <div className='text-[#E2012D] text-4xl flex justify-center items-center'><MdKeyboardDoubleArrowDown /></div>
@@ -104,7 +104,7 @@ const StaticEvents = () => {
         </Swiper>
       </div>
 
-      <div className="box block lg:hidden">
+      <div className="box flex justify-center items-center lg:hidden">
         <Swiper
           slidesPerView={1}
           centeredSlides={true}
@@ -118,10 +118,10 @@ const StaticEvents = () => {
             disableOnInteraction: false,
           }}
           loop={true}
-          className="mySwiper px-16 mt-12"
+          className="mySwiper mt-12 flex justify-center items-center"
         >
           {eventData.map((event, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className='flex justify-center items-center' key={index}>
               <div className="relative w-[280px] h-[350px] grid place-items-center shadow-lg cursor-pointer transition-all hover:shadow-2xl">
                 <img
                   src={event.Image}
