@@ -79,7 +79,7 @@ const StaticAchievements = () => {
 
   return (
     <>
-      <div id={"sachievements"} className="h-full w-full bg-[#091022] pt-16 relative">
+      <div id={"sachievements"} className="h-full w-full bg-[#091022] px-4 lg:px-0 pt-16 relative">
         <img src={tri} alt="" className='absolute top-0 left-[50%] -translate-x-1/2' />
         <h1 className='text-[#dddddd] text-6xl font-bold text-cente font-oswald text-center mb-4'>OUR <span className='text-[#E2012D]'>FEATS</span></h1>
         <div className='text-[#E2012D] text-4xl flex justify-center items-center'><MdKeyboardDoubleArrowDown /></div>
@@ -116,7 +116,7 @@ const StaticAchievements = () => {
           </Swiper>
         </div>
 
-        <div className="box block lg:hidden">
+        <div className="box flex justify-center items-center lg:hidden">
           <Swiper
             slidesPerView={1}
             centeredSlides={true}
@@ -130,11 +130,11 @@ const StaticAchievements = () => {
               disableOnInteraction: false,
             }}
             loop={true}
-            className="mySwiper px-16 mt-12"
+            className="mySwiper flex justify-center items-center mt-12"
           >
             {achivData.map((achiv, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative w-[280px] h-[350px] grid place-items-center shadow-lg cursor-pointer transition-all hover:shadow-2xl">
+              <SwiperSlide className='flex justify-center items-center ' key={index}>
+                <div className="relative  flex justify-center items-center  w-[280px] h-[350px] grid place-items-center shadow-lg cursor-pointer transition-all hover:shadow-2xl">
                   <img
                     src={achiv.Image}
                     onClick={() => openBox(index)}
