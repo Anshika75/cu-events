@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../component/NavBar';
 import Landing from '../component/Landing';
 import Stats from '../component/Stats';
@@ -12,36 +12,44 @@ import StaticAchievements from '../component/StaticAchievements';
 import Loader from '../component/loader';
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [contentLoaded, setContentLoaded] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      // Set a minimum timeout of 2000 milliseconds (2 seconds)
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    };
-    window.addEventListener('load', handleLoad);
+    // Simulate video loading
+    const video = document.getElementById('homepage-video');
+    video.addEventListener('loadeddata', () => {
+      setVideoLoaded(true);
+    });
 
+    // Simulate content loading
+    const contentLoadingTimeout = setTimeout(() => {
+      setContentLoaded(true);
+    }, 2000); // Set a timeout of 2 seconds for content loading
+
+    // Cleanup
     return () => {
-      window.removeEventListener('load', handleLoad);
+      clearTimeout(contentLoadingTimeout);
+      video.removeEventListener('loadeddata', () => {});
     };
   }, []);
 
+  // Render loading spinner while video is loading
+  if (!videoLoaded) {
+    return <Loader />;
+  }
+
+  // Render homepage content once both video and other content are loaded
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
+      {contentLoaded && (
         <div className="bg-white">
           <NavBar />
           <Landing id="home" />
           <Stats id="stats" />
           <About id="about" />
-          {/* <Events id="events"/> */}
-          <StaticEvents id="sevents" />
-          {/* <Achievements id="achievements"/> */}
-          <StaticAchievements id="sachievements" />
+          <Events id="events" />
+          <Achievements id="achievements" />
           <Partner id="partner" />
           <Footer id="contact" />
         </div>
