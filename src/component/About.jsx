@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div id={"about"} className=" w-full container h-full mx-auto pt-16 pb-20 bg-[#091022] text-white font-maven relative">
       <img src={tri} alt="" className='absolute top-0 left-[50%] -translate-x-1/2' />
-      <h1 className='text-[#dddddd] text-6xl font-bold text-cente font-oswald text-center mb-4'>ABOUT <span className='text-[#E2012D]'>CAC</span></h1>
+      <h1 className='text-[#dddddd] text-4xl lg:text-6xl font-bold text-cente font-oswald text-center mb-4'>ABOUT <span className='text-[#E2012D]'>CAC</span></h1>
       <div className='text-[#E2012D] text-4xl flex justify-center items-center'><MdKeyboardDoubleArrowDown /></div>
       <div className="flex flex-row items-center justify-center w-full relative mt-6 lg:mt-20 h-full">
         <img src={about} alt="" className="h-[90vh] w-1/2 hidden lg:block" />

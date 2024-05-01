@@ -83,7 +83,7 @@ const StaticAchievements = () => {
     <>
       <div id={"sachievements"} className="h-full w-full bg-[#091022] px-4 lg:px-0 pt-16 relative">
         <img src={tri} alt="" className='absolute top-0 left-[50%] -translate-x-1/2' />
-        <h1 className='text-[#dddddd] text-6xl font-bold text-cente font-oswald text-center mb-4'>OUR <span className='text-[#E2012D]'>FEATS</span></h1>
+        <h1 className='text-[#dddddd] text-4xl lg:text-6xl font-bold text-cente font-oswald text-center mb-4'>OUR <span className='text-[#E2012D]'>FEATS</span></h1>
         <div className='text-[#E2012D] text-4xl flex justify-center items-center'><MdKeyboardDoubleArrowDown /></div>
 
         <div className="box hidden lg:block">
