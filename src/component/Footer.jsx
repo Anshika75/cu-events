@@ -20,8 +20,8 @@ const Footer = () => {
     <div id={"contact"} className="relative w-full">
       <div className="flex flex-col lg:flex-row z-50 absolute w-[90%] lg:w-[55%] bg-[#E2012D] py-3 font-extrabold font-maven text-white -translate-y-3/4 left-[50%] -translate-x-1/2 min-h-[120px] justify-between lg:px-12 lg:items-center px-2">
         <div className="">
-          <p className="text-3xl font-oswald">PASSION IN ACTION</p>
-          <p className="text-3xl font-oswald mt-3 text-[#091022]">DISCOVER OUR DYNAMIC TEAM</p>
+          <p className="text-xl lg:text-3xl font-oswald">PASSION IN ACTION</p>
+          <p className="text-xl lg:text-3xl font-oswald mt-3 text-[#091022]">DISCOVER OUR DYNAMIC TEAM</p>
         </div>
         <div>
           <Link to="/team"
