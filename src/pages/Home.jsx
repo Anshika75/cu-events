@@ -12,27 +12,27 @@ import StaticAchievements from '../component/StaticAchievements';
 import Loader from '../component/loader';
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      // Set a minimum timeout of 2000 milliseconds (2 seconds)
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    };
-    window.addEventListener('load', handleLoad);
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     // Set a minimum timeout of 2000 milliseconds (2 seconds)
+  //     setTimeout(() => {
+  //       setLoading(false);
+  //     }, 2000);
+  //   };
+  //   window.addEventListener('load', handleLoad);
 
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('load', handleLoad);
+  //   };
+  // }, []);
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <Loader />
-      ) : (
+      ) : ( */}
         <div className="bg-white">
           <NavBar />
           <Landing id="home" />
@@ -45,7 +45,7 @@ const Home = () => {
           <Partner id="partner" />
           <Footer id="contact" />
         </div>
-      )}
+      {/* )} */}
     </>
   );
 };
